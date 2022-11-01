@@ -1,0 +1,44 @@
+operações2 = ['SOMA', 'SUBTRAÇÃO', 'DIVISÃO', 'MULTIPLICAÇÃO', 'POTENCIA'] 
+operações1 = ['RAIZ', 'FATORIAL']
+Soma = ['SOMA']
+Sub = ['SUBTRAÇÃO']
+Divisão = ['DIVISÃO']
+Multi = ['MULTIPLICAÇÃO']
+Pot = ['POTENCIA']
+Rad = ['RAIZ']
+Fat = ['FATORIAL']
+
+operação = input('Qual operação você quer realizar? ').upper()
+
+if operação in operações2:
+   a = float(input('Insira um numero: '))
+   b = float(input('Insira um numero: '))
+
+elif operação in operações1:
+   a = int(input('Insira um numero: '))
+
+
+if operação in Soma:
+  print (a + b)
+
+elif operação in Sub:
+  print (a - b)
+ 
+elif operação in Divisão:
+  print (a / b) 
+
+elif operação in Multi:
+  print (a * b)
+
+elif operação in Pot:
+  print (a ** b)
+
+elif operação in Rad:
+  print (a ** (1/2))
+
+elif operação in Fat:
+  fat = list(range(1, a))
+  product = 1
+  for item in fat:
+      product *= item
+  print(product * a)
